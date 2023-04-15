@@ -6,11 +6,12 @@ const Help = () => {
     return (
     <div>
         <div>
-            <title>Help Page</title>
+            <title>Help Center</title>
         </div>
         <div>
             <h1>Help Page</h1>
-            <p>Welcome to our help page! Here, you can find answers to commonly asked questions and solutions to common problems. If you can't find what you're looking for, please don't hesitate to contact us.</p>
+            <p>Welcome to our help page! Here, you can find answers to commonly asked questions and solutions to common problems. 
+                If you can't find what you're looking for, please don't hesitate to contact us.</p>
             <h2>Frequently Asked Questions</h2>
             <ul>
                 <li>How do I create an account?</li>
