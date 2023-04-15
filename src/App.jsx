@@ -1,28 +1,32 @@
 import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 
+// Layouts
+import HomeLayout from './layouts/HomeLayout'
+import AuthLayout from './layouts/AuthLayout'
+
+// Pages
 import Home from './pages/Home'
+import LogIn from './pages/LogIn'
+import SignUp from './pages/SignUp'
 
+// Components
+import Accordion from './components/Accordian'
+
+// Styling
 import './App.css'
-
-const AppLayout = () => {
-  return (
-    <>
-    </>
-  )
-}
+import preline from 'preline'
 
 function App() {
   return (
     <div className="App">
-      {/* <Routes> */}
-        {/* <Route path="/" element={<AppLayout/>}>
+      <Routes>
+        <Route path="/" element={<HomeLayout/>}>
           <Route index element={<Home/>}/>
-          <Route path="create" element={<CreateCrewmate/>}/>
-          <Route path="gallery" element={<CrewmateGallery/>}/>
-          <Route path="edit/:id" element={<EditCrewmate/>}/>
-        </Route> */}
-      {/* </Routes> */}
-      <Home/>
+        </Route>
+        <Route path="login" element={<LogIn/>}/>
+        <Route path="signup" element={<SignUp/>}/>
+      </Routes>
     </div>
   )
 }
