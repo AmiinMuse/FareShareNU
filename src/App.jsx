@@ -9,6 +9,7 @@ import AuthLayout from './layouts/AuthLayout'
 import Home from './pages/Home'
 import LogIn from './pages/LogIn'
 import SignUp from './pages/SignUp'
+import Help from './pages/Help'
 
 // Components
 import Accordion from './components/Accordian'
@@ -26,6 +27,7 @@ function App() {
         </Route>
         <Route path="login" element={<LogIn/>}/>
         <Route path="signup" element={<SignUp/>}/>
+        <Route path="help" element={<Help/>}/>
       </Routes>
     </div>
   )
