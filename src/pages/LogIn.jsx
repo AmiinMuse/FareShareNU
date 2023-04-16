@@ -1,11 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { supabase } from "../../supabaseClient";
 
 import "./LogIn.css"
 
-const LogIn = () => {
-    useEffect(() => {
-        console.log("Log In Page")
-    }, [])
+const LogIn = ({setSession}) => {
+    const signInWithEmail = async (e) => {
+        e.preventDefault();
+
+        let emailAddress = document.getElementById("login-email").value;
+        let password = document.getElementById("password").value;
+        const { data, error } = await supabase.auth.signInWithPassword({
+            email: emailAddress,
+            password: password
+        })
+
+        console.log(data)
+    }
 
     return (
         <div className="login-container">
@@ -35,12 +45,12 @@ const LogIn = () => {
 
                         <div className="py-3 flex items-center text-xs text-gray-400 uppercase before:flex-[1_1_0%] before:border-t before:border-gray-200 before:mr-6 after:flex-[1_1_0%] after:border-t after:border-gray-200 after:ml-6 dark:text-gray-500 dark:before:border-gray-600 dark:after:border-gray-600">Or</div>
 
-                        <form>
+                        <form onSubmit={signInWithEmail}>
                         <div className="grid gap-y-4">
                             <div>
-                            <label htmlFor="email" className="block text-sm mb-2 dark:text-white">Email address</label>
+                            <label htmlFor="login-email" className="block text-sm mb-2 dark:text-white">Email address</label>
                             <div className="relative">
-                                <input type="email" id="email" name="email" className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" required aria-describedby="email-error"/>
+                                <input type="email" id="login-email" name="email" className="py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" required aria-describedby="email-error"/>
                                 <div className="hidden absolute inset-y-0 right-0 flex items-center pointer-events-none pr-3">
                                 <svg className="h-5 w-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
