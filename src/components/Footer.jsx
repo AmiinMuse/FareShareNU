@@ -4,12 +4,12 @@ const Footer = () => {
     return (
         <footer className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
             <div className="text-center">
-                <div>
-                <a className="flex-none text-xl font-semibold text-black dark:text-white" href="#" aria-label="Brand">Brand</a>
-                </div>
+                {/* <div>
+                <a className="flex-none text-xl font-semibold text-black dark:text-white" href="#" aria-label="Brand">FareShare</a>
+                </div> */}
 
                 <div class="mt-3">
-                <p class="text-gray-500">For the Northwestern Community.</p>
+                <p class="text-gray-500">Built with ❤️ for the Northwestern community.</p>
                 
                 </div>
 

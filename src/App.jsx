@@ -8,7 +8,7 @@ import HomeLayout from './layouts/HomeLayout'
 // Pages
 import Home from './pages/Home'
 import About from './pages/About'
-import LogIn from './pages/LogIn'
+import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Help from './pages/Help'
 
@@ -45,11 +45,11 @@ function App() {
       <Routes>
         <Route path="/" element={<HomeLayout/>}>
           <Route index element={<Home/>}/>
+          <Route path="help" element={<Help/>}/>
+          <Route path="about" element={<About/>}/>
         </Route>
-        <Route path="login" element={<LogIn setSession={setSession}/>}/>
+        <Route path="signin" element={<SignIn/>}/>
         <Route path="signup" element={<SignUp/>}/>
-        <Route path="help" element={<Help/>}/>
-        <Route path="about" element={<About/>}/>
         <Route path="dashboard" element={<Dashboard session={session}/>}>
           <Route index element={<GroupSearch/>}/>
           <Route path="groups" element={<GroupsOverview/>}/>

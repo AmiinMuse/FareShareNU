@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "../../supabaseClient";
 
-import "./LogIn.css"
+import "./SignIn.css"
 
-const LogIn = ({setSession}) => {
+const SignIn = () => {
     const signInWithEmail = async (e) => {
         e.preventDefault();
 
@@ -14,7 +14,9 @@ const LogIn = ({setSession}) => {
             password: password
         })
 
-        console.log(data)
+        if (data) {
+            window.location = "/dashboard"
+        }
     }
 
     return (
@@ -26,7 +28,7 @@ const LogIn = ({setSession}) => {
                         <h1 className="block text-2xl font-bold text-gray-800 dark:text-white">Sign in</h1>
                         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
                         Don't have an account yet?
-                        <a className="text-blue-600 decoration-2 hover:underline font-medium" href="../examples/html/signup.html">
+                        <a className="left-margin text-blue-600 decoration-2 hover:underline font-medium" href="/signup">
                             Sign up here
                         </a>
                         </p>
@@ -63,7 +65,7 @@ const LogIn = ({setSession}) => {
                             <div>
                             <div className="flex justify-between items-center">
                                 <label htmlFor="password" className="block text-sm mb-2 dark:text-white">Password</label>
-                                <a className="text-sm text-blue-600 decoration-2 hover:underline font-medium" href="../examples/html/recover-account.html">Forgot password?</a>
+                                {/* <a className="text-sm text-blue-600 decoration-2 hover:underline font-medium" href="../examples/html/recover-account.html">Forgot password?</a> */}
                             </div>
                             <div className="relative">
                                 <input type="password" id="password" name="password" className="text-input py-3 px-4 block w-full border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400" required aria-describedby="password-error"/>
@@ -76,14 +78,14 @@ const LogIn = ({setSession}) => {
                             <p className="hidden text-xs text-red-600 mt-2" id="password-error">8+ characters required</p>
                             </div>
 
-                            <div className="flex items-center">
+                            {/* <div className="flex items-center">
                             <div className="flex">
                                 <input id="remember-me" name="remember-me" type="checkbox" className="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 pointer-events-none focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"/>
                             </div>
                             <div className="ml-3">
                                 <label htmlFor="remember-me" className="text-sm dark:text-white">Remember me</label>
                             </div>
-                            </div>
+                            </div> */}
 
                             <button type="submit" className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">Sign in</button>
                         </div>
@@ -96,4 +98,4 @@ const LogIn = ({setSession}) => {
     )
 }
 
-export default LogIn;
+export default SignIn;
