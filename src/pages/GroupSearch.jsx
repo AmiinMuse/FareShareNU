@@ -152,7 +152,7 @@ const GroupSearch = () => {
                 <div>
                     <h2>Results:</h2>
                     {groups.map((group) => (
-                        <div key={group.id}>
+                        <div key={group.id} >
                             <p>Starting Location: {group.from}</p>
                             <p>Destination: {group.to}</p>
                             <p>Departure Time: {group.departure_timestamp}</p>
