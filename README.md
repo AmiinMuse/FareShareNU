@@ -20,4 +20,4 @@ Staying focused for hours to debug our pages, sitting together, and bonding toge
 We learned a lot about React, prioritizing what software/technologies to use. How to cooperate on a big project and finish it in a limited time. 
 
 ## What's next for FareShareNU
-We're planning to improve how we group people together. Get more users and find ways to make money from it, while keeping it free for students. Change the website to an app that is more accessible to more students. On top that, we are planning to make a communication platform or online chat that doesn't require a person to share their personal contact info. 
+We're planning to improve how we group people together. Get more users and find ways to make money from it, while keeping it free for students. Change the website to an app that is more accessible to more students. On top of that, we are planning to make a communication platform or online chat that doesn't require a person to share their personal contact info. 
