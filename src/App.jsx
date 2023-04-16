@@ -11,6 +11,7 @@ import About from './pages/about'
 import LogIn from './pages/LogIn'
 import SignUp from './pages/SignUp'
 import Help from './pages/Help'
+import Dashboard from './pages/Dashboard'
 
 // Components
 import Accordion from './components/Accordian'
@@ -30,6 +31,7 @@ function App() {
         <Route path="signup" element={<SignUp/>}/>
         <Route path="help" element={<Help/>}/>
         <Route path="about" element={<About/>}/>
+        <Route path="dashboard" element={<Dashboard/>}/>
       </Routes>
     </div>
   )
