@@ -3,6 +3,8 @@ import React from "react";
 import "./SignUp.css"
 
 const SignUp = () => {
+    conts
+
     return (
         <div className="signup-container">
             <main class="w-full max-w-md mx-auto p-6">

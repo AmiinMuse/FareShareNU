@@ -12,8 +12,8 @@ const IconSection = () => {
                 </svg>
             </div>
             <div className="mt-3">
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Responsive</h3>
-                <p className="mt-1 text-gray-600 dark:text-gray-400">Responsive, and mobile-first project on the web</p>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Quick</h3>
+                <p className="mt-1 text-gray-600 dark:text-gray-400">Creating a group takes less than 5 clicks</p>
             </div>
             </div>
 
@@ -26,7 +26,7 @@ const IconSection = () => {
                 </svg>
             </div>
             <div className="mt-3">
-                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Customizable</h3>
+                <h3 className="text-lg font-semibold text-gray-800 dark:text-white">Convenient</h3>
                 <p className="mt-1 text-gray-600 dark:text-gray-400">Components are easily customized and extendable</p>
             </div>
             </div>
