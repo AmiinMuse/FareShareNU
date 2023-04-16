@@ -102,13 +102,17 @@ const GroupSearch = () => {
 
     return (
         <div>
-            <h1>Group Search</h1>
+            <h1 class="text-2xl font-bold text-gray-800 sm:text-3xl dark:text-white"  style={{marginBottom:10}}>
+                Group Search
+            </h1>
             <form onSubmit={(e) => {
                 e.preventDefault();
                 search();
             }}>
-                <label>
-                    Starting Location:
+
+                
+                <label style={{padding:10}}>
+                    <span style={{ color: 'white' }}>Starting Location:</span>
                     <select value={startingLocation} onChange={(e) => setStartingLocation(e.target.value)} required>
                         <option value="">Select starting location</option>
                         <option value="Evanston">Evanston</option>
@@ -117,8 +121,8 @@ const GroupSearch = () => {
                     </select>
                 </label>
                 <br />
-                <label>
-                    Destination:
+                <label style={{padding:10}}>
+                    <span style={{ color: 'white' }}>Destination:</span>
                     <select value={destination} onChange={(e) => setDestination(e.target.value)} required>
                         <option value="">Select destination</option>
                         <option value="Evanston">Evanston</option>
@@ -127,22 +131,22 @@ const GroupSearch = () => {
                     </select>
                 </label>
                 <br /> 
-                <label>
-                    Departure:
+                <label style={{padding:10}}>
+                    <span style={{ color: 'white' }}>Departure:</span>
                     <input type="date" value={departure} onChange={(e) => setDeparture(e.target.value)} min={currentDate} required/>
                 </label>
                 <br/>
-                <label>
-                    Starting Time:
+                <label style={{padding:10}}>
+                    <span style={{ color: 'white' }}>Starting Time:</span>
                     <input type="time" value={startingTime} onChange={(e) => setStartingTime(e.target.value)} required/>
                 </label>
                 <br />
-                <label>
-                    Ending Time:
+                <label style={{padding:10}}>
+                    <span style={{ color: 'white' }}>Ending Time:</span>
                     <input type="time" value={endingTime} onChange={(e) => setEndingTime(e.target.value)} required/>
                 </label>
                 <br/>
-                <button type="submit">Search</button>
+                <button type="submit" style={{padding:10}}>Search</button>
             </form>
             {groups.length > 0 ? (
                 <div>
