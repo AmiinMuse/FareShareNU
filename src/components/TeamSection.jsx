@@ -38,7 +38,7 @@ const TeamSection = () => {
             </div>
 
             <div className="grid sm:flex sm:items-center gap-y-3 gap-x-4">
-            <img className="rounded-lg w-20 h-20" src="../src/Herbert.jpeg" alt="Image Description"/>
+            <img className="rounded-lg w-20 h-20" src="../../src/assets/Herbert.jpeg" alt="Image Description"/>
 
             <div className="sm:flex sm:flex-col sm:h-full">
                 <div>
@@ -66,7 +66,7 @@ const TeamSection = () => {
             </div>
 
             <div className="grid sm:flex sm:items-center gap-y-3 gap-x-4">
-            <img className="rounded-lg w-20 h-20" src="../src/desmond.jpg" alt="Image Description"/>
+            <img className="rounded-lg w-20 h-20" src="../../src/assets/desmond.jpg" alt="Image Description"/>
 
             <div className="sm:flex sm:flex-col sm:h-full">
                 <div>
@@ -94,7 +94,7 @@ const TeamSection = () => {
             </div>
 
             <div className="grid sm:flex sm:items-center gap-y-3 gap-x-4">
-            <img className="rounded-lg w-20 h-20" src="../src/amiin.jpeg" alt="Image Description"/>
+            <img className="rounded-lg w-20 h-20" src="../../src/assets/amiin.jpeg" alt="Image Description"/>
 
             <div className="sm:flex sm:flex-col sm:h-full">
                 <div>
