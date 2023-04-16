@@ -19,38 +19,42 @@ const GroupsOverview = () => {
   }
 
   const getUserGroups = async () => {
-    try {
-      let userId = currentUser.id
+    let userId = currentUser.id
 
-      const { data, error } = await supabase
-        .from("Groups")
-        .select("*")
-        
-  
-      if (error) {
-        throw error;
-      }
-  
-      const userGroups = data.filter((group) => {
-        const members = JSON.parse(group.members) || [];
-        return members.includes(userId);
-      });
-  
-      return userGroups;
-    } catch (error) {
+    const {data, error} = await supabase.from("Groups").select()
+
+    const userGroups = data.filter((group) => {
+      const members = group.members || [];
+      return members.includes(userId);
+    });
+
+    if (error) {
       console.warn(error);
+    } else {
+      setUserGroups(userGroups)
     }
   }
 
   const getMemberInfo = async () => {
-    const memberUids = userGroups.flatMap((group) => group.members);
-    const members = await Promise.all(memberUids.map(async (uid) => {
-      const user = await supabase.auth().getUser(uid);
+    // const memberUids = userGroups.flatMap((group) => group.members);
+    // const members = await Promise.all(memberUids.map(async (uid) => {
+    //   const user = await supabase.auth().getUser(uid);
+    //   return {
+    //     uid,
+    //     email: user.email,
+    //   };
+    // }));
+
+    const memberUIDs = userGroups.flatMap((group) => group.members)
+    const members = await Promise.all(memberUIDs.map(async (uid) => {
+      const user = await supabase.auth.getUser(uid);
       return {
         uid,
         email: user.email,
       };
     }));
+
+    console.log(members)
   }
 
   useEffect(() => {
@@ -60,22 +64,22 @@ const GroupsOverview = () => {
   }, [])
 
   useEffect(() => {
-    console.log(getUserGroups())
-  }, [currentUser]);
+    getUserGroups()
+  }, [currentUser])
 
   useEffect(() => {
-    setMembersInfo(getMemberInfo());
-  }, [userGroups]);
+    getMemberInfo()
+  }, [userGroups])
 
   return (
     <div>
       {userGroups.map((group) => (
         <div key={group.id}>
           <h2>Group Details:</h2>
-          <p>Starting Location: {group.starting_location}</p>
+          <p>Starting Location: {group.from}</p>
           <p>Destination: {group.to}</p>
-          <p>Departure Time: {group.departure_timestamp}</p>
-          <p>Members:</p>
+          <p>Departure Time: {new Date(group.departure_timestamp).toDateString()}</p>
+          {/* <p>Members:</p>
           <ul>
             {group.members.map((memberId) => {
               const memberInfo = membersInfo.find((member) => member.uid === memberId);
@@ -90,7 +94,7 @@ const GroupsOverview = () => {
                 </li>
               );
             })}
-          </ul>
+          </ul> */}
         </div>
       ))}
     </div>
