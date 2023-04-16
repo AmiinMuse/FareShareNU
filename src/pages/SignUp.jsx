@@ -3,7 +3,6 @@ import React from "react";
 import "./SignUp.css"
 
 const SignUp = () => {
-    conts
 
     return (
         <div className="signup-container">
