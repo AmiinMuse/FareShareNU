@@ -1,7 +1,6 @@
 import React from "react";
 import { supabase } from "../../supabaseClient";
 
-
 import "./SignUp.css"
 
 const SignUp = () => {
