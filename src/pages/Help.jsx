@@ -12,7 +12,7 @@ const Help = () => {
                     <p class="mt-1 hidden md:block text-gray-600 dark:text-gray-400">Answers to the most frequently asked questions.</p>
                 </div>
                 <div class = "div_test">
-                    <h2 class="text-3xll font-bold md:text-4xl md:leading-tight dark:text-white">Have<br/>Other questions?</h2>
+                    <h2 class="text-3xll font-bold md:text-4xl md:leading-tight dark:text-white">Have<br/>other questions?</h2>
                     <a class= "linkttt" href="https://media.istockphoto.com/id/538665020/photo/internet-meme-why-you-no-rage-face-3d-illustration.jpg?s=612x612&w=0&k=20&c=5D_g8Jy8kqg5Op2bb4RvcH8_6y0HGPqt29TKDrEqLyM=">Email us</a>
                 </div>
                 </div>
