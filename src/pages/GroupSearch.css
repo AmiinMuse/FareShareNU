@@ -21,6 +21,15 @@
     color: white;
     margin-bottom: 200px;
   }
+
+  h2 {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  
+
+  
   
   /* Style the form labels */
   label {

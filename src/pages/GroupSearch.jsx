@@ -150,17 +150,34 @@ const GroupSearch = () => {
             </form>
             {groups.length > 0 ? (
                 <div>
-                    <h2>Results:</h2>
-                    {groups.map((group) => (
-                        <div key={group.id} >
-                            <p>Starting Location: {group.from}</p>
-                            <p>Destination: {group.to}</p>
-                            <p>Departure Time: {group.departure_timestamp}</p>
-                            <p>Members: {group.members.length}</p>
-                            <p>Max Members: {group.max_members}</p>
-                            <button onClick={() => addUserToGroup(userId, group.id)}>Join Group</button>
-                        </div>
-                    ))}
+                    <h2 class="results_t font-bold text-gray-800 sm:text-3xl dark:text-white"  style={{marginTop:70, marginBottom:10}}>
+                        Results
+                    </h2>
+
+                    <table class='table_t' style={{marginLeft: 'auto', marginRight: 'auto'}} >
+                        <thead class= 'table_hhh' style={{textAlign: 'center', }}>
+                            <tr style={{color: 'white'}}>
+                            <th style={{paddingRight: 20}}>Starting Loc</th>
+                            <th style={{paddingRight: 20}}> Destination</th>
+                            <th style={{paddingRight: 90}}>Departure Time</th>
+                            <th style={{paddingRight: 20}}>Members</th>
+                            <th style={{paddingRight: 20}}> Max Members</th>
+                            <th>Join Group</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {groups.map((group) => (
+                            <tr key={group.id} style={{backgroundColor: 'white'}} >
+                                <td >{group.from}</td>
+                                <td>{group.to}</td>
+                                <td>{new Date(group.departure_timestamp).toLocaleString()}</td>
+                                <td>{group.members.length}</td>
+                                <td>{group.max_members}</td>
+                                <td style={{color: 'aqua'}}><button onClick={() => addUserToGroup(userId, group.id)}>Join Group</button></td>
+                            </tr>
+                            ))}
+                        </tbody>
+                        </table>
                 </div>
             ) : (
                 <p>No available groups</p>
