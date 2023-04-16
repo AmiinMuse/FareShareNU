@@ -4,6 +4,7 @@ Visit fareshare.nu to access the website. This will be the offical website that 
 
 ## Inspiration
 
+
 ## What it does
 
 
@@ -17,7 +18,7 @@ Visit fareshare.nu to access the website. This will be the offical website that 
 ##  What we learned
 
 
-## What's next for SheRides
+## What's next for FareShareNU
 
 
 ##  Built With
