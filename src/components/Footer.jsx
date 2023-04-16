@@ -9,7 +9,7 @@ const Footer = () => {
                 </div> */}
 
                 <div class="mt-3">
-                <p class="text-gray-500">Built with ❤️ for the Northwestern community.</p>
+                <p class="text-gray-500">Built with ❤️ for the Northwestern community</p>
                 
                 </div>
 

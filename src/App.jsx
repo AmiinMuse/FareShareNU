@@ -4,6 +4,7 @@ import { supabase } from '../supabaseClient'
 
 // Layouts
 import HomeLayout from './layouts/HomeLayout'
+import DashboardLayout from './layouts/DashboardLayout'
 
 // Pages
 import Home from './pages/Home'
@@ -12,7 +13,6 @@ import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 import Help from './pages/Help'
 
-import Dashboard from './pages/Dashboard'
 import GroupSearch from './pages/GroupSearch'
 import GroupsOverview from './pages/GroupsOverview'
 import Profile from './pages/Profile'
@@ -50,7 +50,7 @@ function App() {
         </Route>
         <Route path="signin" element={<SignIn/>}/>
         <Route path="signup" element={<SignUp/>}/>
-        <Route path="dashboard" element={<Dashboard session={session}/>}>
+        <Route path="dashboard" element={<DashboardLayout/>}>
           <Route index element={<GroupSearch/>}/>
           <Route path="groups" element={<GroupsOverview/>}/>
           <Route path="profile" element={<Profile/>}/>
