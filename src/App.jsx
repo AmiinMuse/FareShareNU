@@ -7,14 +7,15 @@ import HomeLayout from './layouts/HomeLayout'
 
 // Pages
 import Home from './pages/Home'
-import About from './pages/about'
+import About from './pages/About'
 import LogIn from './pages/LogIn'
 import SignUp from './pages/SignUp'
 import Help from './pages/Help'
-import Dashboard from './pages/Dashboard'
 
-// Components
-import Accordion from './components/Accordian'
+import Dashboard from './pages/Dashboard'
+import GroupSearch from './pages/GroupSearch'
+import GroupsOverview from './pages/GroupsOverview'
+import Profile from './pages/Profile'
 
 // Styling
 import './App.css'
@@ -49,7 +50,11 @@ function App() {
         <Route path="signup" element={<SignUp/>}/>
         <Route path="help" element={<Help/>}/>
         <Route path="about" element={<About/>}/>
-        <Route path="dashboard" element={<Dashboard session={session}/>}/>
+        <Route path="dashboard" element={<Dashboard session={session}/>}>
+          <Route index element={<GroupSearch/>}/>
+          <Route path="groups" element={<GroupsOverview/>}/>
+          <Route path="profile" element={<Profile/>}/>
+        </Route>
       </Routes>
     </div>
   )

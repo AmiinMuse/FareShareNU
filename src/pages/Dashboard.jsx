@@ -1,10 +1,11 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 import './Dashboard.css'
 
 const Dashboard = ({session}) => {
     return (
-        <h1>Dashboard</h1>
+        <Outlet/>
     )
 }
 
