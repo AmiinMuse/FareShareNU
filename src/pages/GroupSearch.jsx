@@ -150,7 +150,7 @@ const GroupSearch = () => {
             </form>
             {groups.length > 0 ? (
                 <div>
-                    <h2 class="results_t font-bold text-gray-800 sm:text-3xl dark:text-white"  style={{marginTop:70, marginBottom:10}}>
+                    <h2 class="results_t font-bold text-gray-800 sm:text-3xl dark:text-white"  style={{marginTop:70, marginBottom:10, textAlign: 'center'}}>
                         Results
                     </h2>
 

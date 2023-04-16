@@ -1,10 +1,10 @@
 /* Apply a box-sizing border-box to all elements */
-/* * {
+* {
   box-sizing: border-box;
-} */
+} 
 
 /* Style the form container */
-/* form {
+form {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
