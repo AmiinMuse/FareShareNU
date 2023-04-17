@@ -1,19 +1,19 @@
 /* Apply a box-sizing border-box to all elements */
 * {
-    box-sizing: border-box;
-  }
-  
-  /* Style the form container */
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0 auto;
-    max-width: 1000px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
+  box-sizing: border-box;
+} 
+
+/* Style the form container */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1000px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
   h1 {
     text-align: center;
